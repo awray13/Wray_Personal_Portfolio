@@ -214,6 +214,7 @@
     <Content Include="assets\vendor\remixicon\remixicon.woff" />
     <Content Include="assets\vendor\remixicon\remixicon.woff2" />
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\ashtondwray-portfolio - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
