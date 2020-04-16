@@ -755,7 +755,7 @@
 
                         <div class="row">
                             <div class="col">
-                                <button class="btn btn-primary btn-wide" id="btnSOAF">Click Me</button>
+                                <button class="btn btn-outline-secondary" id="btnSOAF">Click Me</button>
                             </div>
                         </div>
 
@@ -764,13 +764,37 @@
                                 <p id="soafOutput"></p>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col">
+                                <div id="fearsCode">
+                                    <pre class="brush: js">
+                                        function SunsetHills(buildings) {
+                                            //Set tallest to the smallest possible number
+                                            let tallest = Number.MIN_VALUE;
+
+                                            //Here I want to build a new array that contains just the building that can see the sunset
+                                            let sunsetViews = new Array();
+
+                                            for (var index = 0; index < buildings.length; index++) {
+                                                if (buildings[index] > tallest) {
+                                                    tallest = buildings[index];
+                                                    sunsetViews.push(`The Building in position ${index} with height ${tallest} can see the sunset. <br>`);
+                                                }
+                                            }
+
+                                            return sunsetViews.join("");
+                                        }
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
 
                 <!-- Modal footer -->
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-success" id="showHillsCode">Show Code</button>
+                    <button type="button" class="btn btn-outline-success" id="showFearsCode">Show Code</button>
                     <button type="button" class="btn btn-outline-secondary"  id="clearFearsCode">Clear</button>
                     <button type="button" class="btn btn-outline-danger" data-dismiss="modal" id="closeFearsBtn">Close</button>
                 </div>

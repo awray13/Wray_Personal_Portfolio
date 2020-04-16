@@ -39,26 +39,55 @@
     });
 
 // Clear data with clear button 
-$("#btnClear").on("click", function () {
-    $("#inputK").val("");
-    $("#soafInput1").val("");
-    $("#soafInput2").val("");
-    $("#soafInput3").val("");
-    $("#soafInput4").val("");
-    $("#soafInput5").val("");
-    $("#btnSOAF").html("");
+//$("#btnClear").on("click", function () {
+//    $("#inputK").val("");
+//    $("#soafInput1").val("");
+//    $("#soafInput2").val("");
+//    $("#soafInput3").val("");
+//    $("#soafInput4").val("");
+//    $("#soafInput5").val("");
+//    $("#btnSOAF").html("");
 
+//});
+
+//// Clear data with modal  x button 
+//$("#modalClear").on("click", function () {
+//    $("#inputK").val("");
+//    $("#soafInput1").val("");
+//    $("#soafInput2").val("");
+//    $("#soafInput3").val("");
+//    $("#soafInput4").val("");
+//    $("#soafInput5").val("");
+//    $("#btnSOAF").html("");
+
+//});
+
+// Clear and close button: can be used in all js files, just remember to change "click" selector and "output" selector
+$("#closeFearsBtn").on("click", function () {
+    $(".clearMe").val("");
+    $("#soafOutput").html("");
 });
 
-// Clear data with modal  x button 
-$("#modalClear").on("click", function () {
-    $("#inputK").val("");
-    $("#soafInput1").val("");
-    $("#soafInput2").val("");
-    $("#soafInput3").val("");
-    $("#soafInput4").val("");
-    $("#soafInput5").val("");
-    $("#btnSOAF").html("");
-
+$("#closeFearsModal").on("click", function () {
+    $(".clearMe").val("");
+    $("#soafOutput").html("");
 });
 
+$("#clearFearsCode").on("click", function () {
+    $(".clearMe").val("");
+    $("#soafOutput").html("");
+});
+
+// Function to show/hide code
+$("#fearsCode").hide();
+$("#showFearsCode").on("click", function () {
+    $("#fearsCode").toggle();
+    //if ($(this).text() == "Show Code") {
+    //    $(this).text("Hide Code");
+    //} else {
+    //    $(this).text("Show Code");
+    //}
+    // example of ternary operator
+    let btnText = String($(this).text());
+    $(this).text(btnText.startsWith("Show") ? btnText.replace("Show", "Hide") : btnText.replace("Hide", "Show"));
+});

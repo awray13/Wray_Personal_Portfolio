@@ -47,21 +47,21 @@ function SunsetHills(buildings) {
 
 
 // Clear data with clear button 
-$("#btnClear").on("click", function () {
+$("#closeHillsModal").on("click", function () {
     $("#sunsetInput1, #sunsetInput2, #sunsetInput3, #sunsetInput4, #sunsetInput5, #sunsetInput6").val("");
     $("#outputHills").html("");
 
 });
 
 // Clear data with modal  x button 
-$("#modalClear").on("click", function () {
+$("#clearHillsCode").on("click", function () {
     $("#sunsetInput1, #sunsetInput2, #sunsetInput3, #sunsetInput4, #sunsetInput5, #sunsetInput6").val("");
     $("#outputHills").html("");
 
 });
 
 // Clear data with close button 
-$("#btnHillsClose").on("click", function () {
+$("#closeHillsBtn").on("click", function () {
     $("#sunsetInput1, #sunsetInput2, #sunsetInput3, #sunsetInput4, #sunsetInput5, #sunsetInput6").val("");
     $("#outputHills").html("");
 
@@ -84,5 +84,5 @@ $("#showHillsCode").on("click", function () {
     //}
     // example of ternary operator
     let btnText = String($(this).text());
-    $(this).text(btnText.startsWtih("Show") ? btn.Text.replace("Show", "Hide") : btnText.replace("Hide", "Show"));
+    $(this).text(btnText.startsWith("Show") ? btnText.replace("Show", "Hide") : btnText.replace("Hide", "Show"));
 });

@@ -152,10 +152,30 @@ function buzzItTemplate() {
 }
 
 // Function to clear all elements from modal
-function ClearFizzBuzzData() {
-    document.getElementById("Fizzvalue").value = "";
-    document.getElementById("Buzzvalue").value = "";
+//function ClearFizzBuzzData() {
+//    document.getElementById("Fizzvalue").value = "";
+//    document.getElementById("Buzzvalue").value = "";
 
-    document.getElementById("results").innerHTML = "";
+//    document.getElementById("results").innerHTML = "";
 
-}
+//}
+
+// Clear and close button: can be used in all js files, just remember to change "click" selector and "output" selector
+$("#btnHillsClose").on("click", function () {
+    $(".clearMe").val("");
+    $("#outputHills").html("");
+});
+
+// Function to show/hide code
+$("#hillsCode").hide();
+$("#showHillsCode").on("click", function () {
+    $("#hillsCode").toggle();
+    //if ($(this).text() == "Show Code") {
+    //    $(this).text("Hide Code");
+    //} else {
+    //    $(this).text("Show Code");
+    //}
+    // example of ternary operator
+    let btnText = String($(this).text());
+    $(this).text(btnText.startsWith("Show") ? btnText.replace("Show", "Hide") : btnText.replace("Hide", "Show"));
+});
