@@ -161,15 +161,25 @@ function buzzItTemplate() {
 //}
 
 // Clear and close button: can be used in all js files, just remember to change "click" selector and "output" selector
-$("#btnHillsClose").on("click", function () {
+$("#closeFizzModal").on("click", function () {
     $(".clearMe").val("");
-    $("#outputHills").html("");
+    $("#results").html("");
+});
+
+$("#clearFizzCode").on("click", function () {
+    $(".clearMe").val("");
+    $("#results").html("");
+});
+
+$("#closeFizzBtn").on("click", function () {
+    $(".clearMe").val("");
+    $("#results").html("");
 });
 
 // Function to show/hide code
-$("#hillsCode").hide();
-$("#showHillsCode").on("click", function () {
-    $("#hillsCode").toggle();
+$("#fizzCode").hide();
+$("#showFizzCode").on("click", function () {
+    $("#fizzCode").toggle();
     //if ($(this).text() == "Show Code") {
     //    $(this).text("Hide Code");
     //} else {

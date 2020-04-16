@@ -34,19 +34,32 @@ function palindrome(tacoCatString) {
     // Check to see if tacoCatString is a Palindrome
     if (changeChar === checkPalindrome) {
 
-        document.getElementById("demo").innerHTML = tacoCatString + " is a Palindrome!";
+        document.getElementById("tacoOuput").innerHTML = tacoCatString + " is a Palindrome!";
     }
     else {
-        document.getElementById("demo").innerHTML = tacoCatString + " is not a Palindrome!";
+        document.getElementById("tacoOuput").innerHTML = tacoCatString + " is not a Palindrome!";
     }
                                                                                                                     
 }
 
 // Clear and close button: can be used in all js files, just remember to change "click" selector and "output" selector
-$("#btnHillsClose").on("click", function () {
+$("#closeTacoModal").on("click", function () {
     $(".clearMe").val("");
-    $("#outputHills").html("");
+    $("#tacoOuput").html("");
 });
+
+// Clear and close button: can be used in all js files, just remember to change "click" selector and "output" selector
+$("#closeTacoBtn").on("click", function () {
+    $(".clearMe").val("");
+    $("#tacoOuput").html("");
+});
+
+// Clear and close button: can be used in all js files, just remember to change "click" selector and "output" selector
+$("#clearTacoCode").on("click", function () {
+    $(".clearMe").val("");
+    $("#tacoOuput").html("");
+});
+
 
 // Function to show/hide code
 $("#tacoCode").hide();
