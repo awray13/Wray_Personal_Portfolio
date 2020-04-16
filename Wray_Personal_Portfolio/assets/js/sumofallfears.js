@@ -17,14 +17,14 @@
 
             // loop over each item in the array 1 at a time
             for (var index = 0; index <= myArray.length; index++) {
-        // determine what number you need to slave for the given K...
+        // determine what number you need to solve for the given K...
         // find k - myArray[index]
-        target = target - myArray[index];
+        target = k - myArray[index];
                 // myArray[0] = 15 : 15 > K continue on
                 // find 14 -  3 or 11 in the remaining array members
                 // myArray
                 // arr.indexOf(searchElement[, fromIndex])
-                if (myArray.indexOf(target, index + 1) > 0) {
+                if (myArray.indexOf(target, index + 1) >= 0) {
         found = true;
                     break;
                 }
