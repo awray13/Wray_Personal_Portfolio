@@ -49,9 +49,9 @@ $("#btnHillsClose").on("click", function () {
 });
 
 // Function to show/hide code
-$("#hillsCode").hide();
-$("#showHillsCode").on("click", function () {
-    $("#hillsCode").toggle();
+$("#tacoCode").hide();
+$("#showTacoCode").on("click", function () {
+    $("#tacoCode").toggle();
     //if ($(this).text() == "Show Code") {
     //    $(this).text("Hide Code");
     //} else {

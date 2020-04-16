@@ -31,10 +31,10 @@
 
             }
             if (found) {
-        $("#output").html(`A K of ${k} was found in the array `);
+                $("#soafOutput").html(`A K of ${k} was found in the array `);
             }
             else {
-        $("#output").html(`A K value of ${k} was not found in the array`);
+                $("#soafOutput").html(`A K value of ${k} was not found in the array`);
             }
     });
 
