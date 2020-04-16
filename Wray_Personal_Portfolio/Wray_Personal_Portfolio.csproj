@@ -76,6 +76,7 @@
     <Content Include="assets\img\favicon.png" />
     <Content Include="assets\img\logo.png" />
     <Content Include="assets\img\me.jpg" />
+    <Content Include="assets\img\portfoliobg.jpg" />
     <Content Include="assets\img\portfolio\portfolio-1.jpg" />
     <Content Include="assets\img\portfolio\portfolio-2.jpg" />
     <Content Include="assets\img\portfolio\portfolio-3.jpg" />
