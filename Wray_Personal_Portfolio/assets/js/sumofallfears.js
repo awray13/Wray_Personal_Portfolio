@@ -61,3 +61,4 @@ $("#modalClear").on("click", function () {
     $("#btnSOAF").html("");
 
 });
+

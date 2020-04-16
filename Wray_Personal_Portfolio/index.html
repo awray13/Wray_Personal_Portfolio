@@ -531,7 +531,7 @@
                 <!-- Modal Header -->
                 <div class="modal-header">
                     <h4 class="modal-title" style="color: #000;">FizzBuzz</h4>
-                    <button type="button" class="close" data-dismiss="modal" onclick="ClearFizzBuzzData()">&times;</button>
+                    <button type="button" class="close" data-dismiss="modal" id="closeFizzModal">&times;</button>
                 </div>
 
                 <!-- Modal body -->
@@ -539,9 +539,9 @@
                     <div>
                         <h2>Fizz Buzz</h2>
                         <p>Please enter two numbers between 1 and 100</p>
-                        <label for=""><span>Enter a number:</span><input class="form-control clearMe" id="Fizzvalue" type="number" name="fizz" value=""></label>
-                        <label for=""><span>Enter another number:</span><input class="form-control clearMe" id="Buzzvalue" type="number" name="buzz" value=""></label>
-                        <button class="btn btn-outline-secondary" style="margin-bottom: 5px;" onclick="buzzItTemplate()">Solve</button>
+                        <label for=""><span>Enter a number:</span><input class="form-control clearMe numOnly" id="Fizzvalue" type="number" name="fizz" value=""></label>
+                        <label for=""><span>Enter another number:</span><input class="form-control clearMe numOnly" id="Buzzvalue" type="number" name="buzz" value=""></label>
+                        <button class="btn btn-outline-secondary" style="margin-bottom: 5px;" onclick="buzzItTemplate()">Click Me</button>
                         <!--<label for=""><span></span><input type="submit" onclick="buzzItTemplate()" value="Solve"></label>-->
                         <div style="overflow-x: auto;">
                             <table id="results">
@@ -568,8 +568,9 @@
 
                 <!-- Modal footer -->
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" onclick="ClearFizzBuzzData()">Clear</button>
-                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal" onclick="ClearFizzBuzzData()">Close</button>
+                    <button type="button" class="btn btn-outline-success" id="showFizzCode">Show Code</button>
+                    <button type="button" class="btn btn-outline-secondary" id="clearFizzCode">Clear</button>
+                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal" id="closeFizzBtn">Close</button>
                 </div>
 
             </div>
@@ -627,7 +628,7 @@
                 <!-- Modal Header -->
                 <div class="modal-header">
                     <h4 class="modal-title" style="color: #000;">Sunset Hills</h4>
-                    <button type="button" id="modalClear" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" id="closeHillsModal" class="close" data-dismiss="modal">&times;</button>
                 </div>
 
                 <!-- Modal body -->
@@ -644,27 +645,27 @@
                         <br>
                         <div class="row">
                             <div class="col">
-                                <input id="sunsetInput1" class="form-control clearMe">
+                                <input id="sunsetInput1" class="form-control clearMe numOnly">
                             </div>
                             <div class="col">
-                                <input id="sunsetInput2" class="form-control clearMe">
+                                <input id="sunsetInput2" class="form-control clearMe numOnly">
                             </div>
                             <div class="col">
-                                <input id="sunsetInput3" class="form-control clearMe">
+                                <input id="sunsetInput3" class="form-control clearMe numOnly">
                             </div>
                             <div class="col">
-                                <input id="sunsetInput4" class="form-control clearMe">
+                                <input id="sunsetInput4" class="form-control clearMe numOnly">
                             </div>
                             <div class="col">
-                                <input id="sunsetInput5" class="form-control clearMe">
+                                <input id="sunsetInput5" class="form-control clearMe numOnly">
                             </div>
                             <div class="col">
-                                <input id="sunsetInput6" class="form-control clearMe">
+                                <input id="sunsetInput6" class="form-control clearMe numOnly">
                             </div>
                         </div>
                         <br>
                         <div class="row">
-                            <button id="btnHills" class="col btn btn-dark">Click Me</button>
+                            <button id="btnHills" class="col btn btn-outline-secondary">Click Me</button>
                         </div>
                         <br>
                         <div class="row">
@@ -701,8 +702,9 @@
 
                 <!-- Modal footer -->
                 <div class="modal-footer">
-                    <button type="button" id="btnClear" class="btn btn-outline-secondary">Clear</button>
-                    <button type="button" id="btnHillsClose" class="btn btn-outline-danger" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-outline-success" id="showHillsCode">Show Code</button>
+                    <button type="button" id="clearHillsCode" class="btn btn-outline-secondary">Clear</button>
+                    <button type="button" id="closeHillsBtn" class="btn btn-outline-danger" data-dismiss="modal">Close</button>
                 </div>
 
             </div>
@@ -716,18 +718,61 @@
                 <!-- Modal Header -->
                 <div class="modal-header">
                     <h4 class="modal-title" style="color: #000;">Sum of All Fears</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" data-dismiss="modal" id="closeFearsModal">&times;</button>
                 </div>
 
                 <!-- Modal body -->
                 <div class="modal-body" style="color: #000;">
-                    Modal body..
+                    <div class="container">
+                        <div class="row">
+                            <div class="col text-center h2">Sum of all fears Exercise</div>
+                        </div>
+                        <br />
+                        <div class="row ">
+                            <div class="offset-4 col-4">
+                                <input class="form-control" id="k" type="text" placeholder="Enter K" />
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col">
+                                <input id="soafInput1" class="form-control clearMe" placeholder="Num1" type="text" />
+                            </div>
+                            <div class="col">
+                                <input id="soafInput2" class="form-control clearMe" placeholder="Num2" type="text" />
+                            </div>
+                            <div class="col">
+                                <input id="soafInput3" class="form-control clearMe" placeholder="Num3" type="text" />
+                            </div>
+                            <div class="col">
+                                <input id="soafInput4" class="form-control clearMe" placeholder="Num4" type="text" />
+                            </div>
+                            <div class="col">
+                                <input id="soafInput5" class="form-control clearMe" placeholder="Num5" type="text" />
+                            </div>
+                        </div>
+                        <br />
+
+                        <div class="row">
+                            <div class="col">
+                                <button class="btn btn-primary btn-wide" id="btnSOAF">Click Me</button>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <p id="soafOutput"></p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
                 <!-- Modal footer -->
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" onclick="ClearData()">Clear</button>
-                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-outline-success" id="showHillsCode">Show Code</button>
+                    <button type="button" class="btn btn-outline-secondary"  id="clearFearsCode">Clear</button>
+                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal" id="closeFearsBtn">Close</button>
                 </div>
 
             </div>
@@ -887,6 +932,8 @@
 
         </div>
     </section><!-- End Portfolio Section -->
+
+
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
         <div class="container">
