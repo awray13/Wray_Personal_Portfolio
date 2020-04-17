@@ -12,13 +12,6 @@ function displayWord() {
     document.getElementById("demo").innerHTML = "<h5 style='color: #fff; background-color: #18d26e;'>TacoCat Results:</h5>" + taco.join("");
 }
 
-// Clear data 
-function ClearData() {
-    document.getElementById("word").value = "";
-
-    document.getElementById("demo").innerHTML = "";
-
-}
 
 // Function to use TacoCat as a Palindrome
 
@@ -74,3 +67,11 @@ $("#showTacoCode").on("click", function () {
     let btnText = String($(this).text());
     $(this).text(btnText.startsWith("Show") ? btnText.replace("Show", "Hide") : btnText.replace("Hide", "Show"));
 });
+
+// Older code to Clear data 
+function ClearData() {
+    document.getElementById("word").value = "";
+
+    document.getElementById("demo").innerHTML = "";
+
+}

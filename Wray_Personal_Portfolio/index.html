@@ -472,7 +472,7 @@
                     <div class="icon-box" id="fizzBuzz" data-toggle="modal" data-target="#fizzBuzzModal">
                         <div class="icon"><i class="bx bxl-dribbble"></i></div>
                         <!-- Link needs to be changed into a modal button -->
-                        <h4><a href="">Fizz Buzz</a></h4>
+                        <h4>Fizz Buzz</h4>
                         <p>Write a program that prints the numbers from 1 to 100. For multiples of two numbers entered in by a user, display either "Fizz", "Buzz", or "FizzBuzz".</p>
                     </div>
                 </div>
@@ -483,7 +483,7 @@
                     <div class="icon-box" id="tacoCat" data-toggle="modal" data-target="#tacoCatModal">
                         <div class="icon"><i class="bx bx-file"></i></div>
                         <!-- Link needs to be changed into a modal button -->
-                        <h4><a href="">TacoCat</a></h4>
+                        <h4>TacoCat</h4>
                         <p>Write a program that allows a user to enter in a word or phrase and then prints out the reverse of what was entered.</p>
                     </div>
                 </div>
@@ -493,7 +493,7 @@
                     <div class="icon-box" id="sunsetHills" data-toggle="modal" data-target="#sunsetHillsModal">
                         <div class="icon"><i class="bx bx-tachometer"></i></div>
                         <!-- Link needs to be changed into a modal button -->
-                        <h4><a href="">Sunset Hills</a></h4>
+                        <h4>Sunset Hills</h4>
                         <p>An array of buildings is facing the sun. The heights of each building from West to East is given in an integer array. You have to tell which buildings will be able to see the sunset. </p>
                     </div>
                 </div>
@@ -503,7 +503,7 @@
                     <div class="icon-box" id="sumOfAllFears" data-toggle="modal" data-target="#sumOfAllFearsModal">
                         <div class="icon"><i class="bx bx-world"></i></div>
                         <!-- Link needs to be changed into a modal button -->
-                        <h4><a href="">Sum of all Fears</a></h4>
+                        <h4>Sum of all Fears</h4>
                         <p>Given a list of numbers and a number K, return whether any two numbers from the list add up to K.</p>
                     </div>
                 </div>
@@ -576,22 +576,46 @@
                             <div class="col">
                                 <div id="fizzCode">
                                     <pre class="brush: js">
-                                        function SunsetHills(buildings) {
-                                            //Set tallest to the smallest possible number
-                                            let tallest = Number.MIN_VALUE;
-
-                                            //Here I want to build a new array that contains just the building that can see the sunset
-                                            let sunsetViews = new Array();
-
-                                            for (var index = 0; index < buildings.length; index++) {
-                                                if (buildings[index] > tallest) {
-                                                    tallest = buildings[index];
-                                                    sunsetViews.push(`The Building in position ${index} with height ${tallest} can see the sunset. <br>`);
-                                                }
+                                        function FizzBuzzD(value1, value2) {
+                                            let returnArray = [];
+                                            for (let i = 1; i <= 100; i++) {
+                                                returnArray[i] = ((i % value1 == 0 ? "<b style='color: #18d26e;'>Fizz</b>" : "") + (i % value2 == 0 ? "<b style='color: #18d26e;'>Buzz</b>" : "") || i);
                                             }
-
-                                            return sunsetViews.join("");
+                                            return returnArray;
                                         }
+
+                                        // Function to call and use our FizzBuzz function
+                                        function buzzIt() {
+                                            let output = "";
+                                            let val1 = document.getElementById("Fizzvalue").value;
+                                            let val2 = document.getElementById("Buzzvalue").value;
+                                            output = FizzBuzzC(val1, val2);
+                                            document.getElementById("results").innerHTML = output;
+                                        }
+
+                                        // Call and use our template
+                                        function buzzItTemplate() {
+                                            let output = [];
+                                            let headTemplate = document.getElementById("template-header");
+                                            let rowTemplate = document.getElementById("template-row-items");
+
+                                            let templateHTML = rowTemplate.innerHTML;
+                                            let resultsHTML = headTemplate.innerHTML;
+
+                                            // Get the value the user entered
+                                            let val1 = document.getElementById("Fizzvalue").value;
+                                            let val2 = document.getElementById("Buzzvalue").value;
+
+                                            // Call out fizzbuzz function
+                                            output = FizzBuzzD(val1, val2);
+                                            for (i = 1; i < output.length; i += 5) {
+                                                resultsHTML += templateHTML.replace("{{val1}}", output[i])
+                                                    .replace("{{val2}}", output[i + 1])
+                                                    .replace("{{val3}}", output[i + 2])
+                                                    .replace("{{val4}}", output[i + 3])
+                                                    .replace("{{val5}}", output[i + 4]);
+                                            }
+                                            document.getElementById("results").innerHTML = resultsHTML;
                                     </pre>
                                 </div>
                             </div>
@@ -657,21 +681,24 @@
                             <div class="col">
                                 <div id="tacoCode">
                                     <pre class="brush: js">
-                                        function SunsetHills(buildings) {
-                                            //Set tallest to the smallest possible number
-                                            let tallest = Number.MIN_VALUE;
+                                        // Function to use TacoCat as a Palindrome
+                                        function palindrome(tacoCatString) {
+                                            var tacoCatString = document.getElementById("word").value;
 
-                                            //Here I want to build a new array that contains just the building that can see the sunset
-                                            let sunsetViews = new Array();
+                                            // remove special characters, spaces and make lowercase
+                                            var changeChar = tacoCatString.replace(/[^A-Z0-9]/ig, "").toLowerCase();
 
-                                            for (var index = 0; index < buildings.length; index++) {
-                                                if (buildings[index] > tallest) {
-                                                    tallest = buildings[index];
-                                                    sunsetViews.push(`The Building in position ${index} with height ${tallest} can see the sunset. <br>`);
-                                                }
+                                            // reverse removeChar for comparison
+                                            var checkPalindrome = changeChar.split("").reverse().join('');
+
+                                            // Check to see if tacoCatString is a Palindrome
+                                            if (changeChar === checkPalindrome) {
+
+                                                document.getElementById("tacoOuput").innerHTML = tacoCatString + " is a Palindrome!";
                                             }
-
-                                            return sunsetViews.join("");
+                                            else {
+                                                document.getElementById("tacoOuput").innerHTML = tacoCatString + " is not a Palindrome!";
+                                            }                                                                      
                                         }
                                     </pre>
                                 </div>
@@ -840,22 +867,43 @@
                             <div class="col">
                                 <div id="fearsCode">
                                     <pre class="brush: js">
-                                        function SunsetHills(buildings) {
-                                            //Set tallest to the smallest possible number
-                                            let tallest = Number.MIN_VALUE;
+                                        $("#btnSOAF").on("click", function () {
+                                            let k = Number($("#inputK").val());
 
-                                            //Here I want to build a new array that contains just the building that can see the sunset
-                                            let sunsetViews = new Array();
+                                                let myArray = new Array();
+                                                myArray.push(Number($("#soafInput1").val()));
+                                                myArray.push(Number($("#soafInput2").val()));
+                                                myArray.push(Number($("#soafInput3").val()));
+                                                myArray.push(Number($("#soafInput4").val()));
+                                                myArray.push(Number($("#soafInput5").val()));
 
-                                            for (var index = 0; index < buildings.length; index++) {
-                                                if (buildings[index] > tallest) {
-                                                    tallest = buildings[index];
-                                                    sunsetViews.push(`The Building in position ${index} with height ${tallest} can see the sunset. <br>`);
+                                                // k = 14
+                                                // 15 6 8 9 4
+                                                let target = 0;
+                                                let found = false;
+
+                                                // loop over each item in the array 1 at a time
+                                                for (var index = 0; index <= myArray.length; index++) {
+                                            // determine what number you need to solve for the given K...
+                                            // find k - myArray[index]
+                                            target = k - myArray[index];
+                                                    // myArray[0] = 15 : 15 > K continue on
+                                                    // find 14 -  3 or 11 in the remaining array members
+                                                    // myArray
+                                                    // arr.indexOf(searchElement[, fromIndex])
+                                                    if (myArray.indexOf(target, index + 1) >= 0) {
+                                            found = true;
+                                                        break;
+                                                    }
+
                                                 }
-                                            }
-
-                                            return sunsetViews.join("");
-                                        }
+                                                if (found) {
+                                                    $("#soafOutput").html(`A K of ${k} was found in the array `);
+                                                }
+                                                else {
+                                                    $("#soafOutput").html(`A K value of ${k} was not found in the array`);
+                                                }
+                                        });
                                     </pre>
                                 </div>
                             </div>
