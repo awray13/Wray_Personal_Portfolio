@@ -113,7 +113,10 @@
     <Content Include="assets\vendor\boxicons\css\transformations.css" />
     <Content Include="assets\vendor\boxicons\fonts\boxicons.svg" />
     <Content Include="assets\vendor\counterup\counterup.min.js" />
-    <Content Include="assets\vendor\icofont\icofont.min.css" />
+    <Content Include="assets\vendor\icofont\icofont\demo.html" />
+    <Content Include="assets\vendor\icofont\icofont\fonts\icofont.svg" />
+    <Content Include="assets\vendor\icofont\icofont\icofont.css" />
+    <Content Include="assets\vendor\icofont\icofont\icofont.min.css" />
     <Content Include="assets\vendor\isotope-layout\isotope.pkgd.js" />
     <Content Include="assets\vendor\isotope-layout\isotope.pkgd.min.js" />
     <Content Include="assets\vendor\jquery.easing\jquery.easing.min.js" />
@@ -204,8 +207,6 @@
     <Content Include="assets\vendor\boxicons\fonts\boxicons.ttf" />
     <Content Include="assets\vendor\boxicons\fonts\boxicons.woff" />
     <Content Include="assets\vendor\boxicons\fonts\boxicons.woff2" />
-    <Content Include="assets\vendor\icofont\fonts\icofont.woff" />
-    <Content Include="assets\vendor\icofont\fonts\icofont.woff2" />
     <Content Include="assets\vendor\jquery\jquery.min.map" />
     <Content Include="assets\vendor\owl.carousel\LICENSE" />
     <Content Include="assets\vendor\owl.carousel\README.md" />
@@ -214,6 +215,10 @@
     <Content Include="assets\vendor\remixicon\remixicon.ttf" />
     <Content Include="assets\vendor\remixicon\remixicon.woff" />
     <Content Include="assets\vendor\remixicon\remixicon.woff2" />
+    <Content Include="assets\vendor\icofont\icofont\fonts\icofont.eot" />
+    <Content Include="assets\vendor\icofont\icofont\fonts\icofont.ttf" />
+    <Content Include="assets\vendor\icofont\icofont\fonts\icofont.woff" />
+    <Content Include="assets\vendor\icofont\icofont\fonts\icofont.woff2" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\ashtondwray-portfolio - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
