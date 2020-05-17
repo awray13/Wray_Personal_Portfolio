@@ -87,6 +87,13 @@
     <Content Include="assets\img\portfolio\portfolio-8.jpg" />
     <Content Include="assets\img\portfolio\portfolio-9.jpg" />
     <Content Include="assets\img\profile.jpg" />
+    <Content Include="assets\img\profile5.png" />
+    <Content Include="assets\img\profile1.png" />
+    <Content Include="assets\img\profile2.png" />
+    <Content Include="assets\img\profile3.png" />
+    <Content Include="assets\img\profile4.png" />
+    <Content Include="assets\img\profile6.png" />
+    <Content Include="assets\img\profile7.png" />
     <Content Include="assets\img\testimonials\testimonials-1.jpg" />
     <Content Include="assets\img\testimonials\testimonials-2.jpg" />
     <Content Include="assets\img\testimonials\testimonials-3.jpg" />
