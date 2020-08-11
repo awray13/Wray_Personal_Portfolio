@@ -77,6 +77,13 @@
     <Content Include="assets\img\logo.png" />
     <Content Include="assets\img\me.jpg" />
     <Content Include="assets\img\portfoliobg.jpg" />
+    <Content Include="assets\img\portfolio\caspar-camille-rubin-0qvBNep1Y04-unsplash.jpg" />
+    <Content Include="assets\img\portfolio\code1.jpg" />
+    <Content Include="assets\img\portfolio\code2.jpg" />
+    <Content Include="assets\img\portfolio\fabian-grohs-7U-67_T_J34-unsplash.jpg" />
+    <Content Include="assets\img\portfolio\kevin-horvat-Pyjp2zmxuLk-unsplash.jpg" />
+    <Content Include="assets\img\portfolio\louis-reed-53jnUK5LqEY-unsplash.jpg" />
+    <Content Include="assets\img\portfolio\portfolio-13.jpg" />
     <Content Include="assets\img\portfolio\portfolio-1.jpg" />
     <Content Include="assets\img\portfolio\portfolio-2.jpg" />
     <Content Include="assets\img\portfolio\portfolio-3.jpg" />
@@ -86,6 +93,9 @@
     <Content Include="assets\img\portfolio\portfolio-7.jpg" />
     <Content Include="assets\img\portfolio\portfolio-8.jpg" />
     <Content Include="assets\img\portfolio\portfolio-9.jpg" />
+    <Content Include="assets\img\portfolio\portfolio-10.jpg" />
+    <Content Include="assets\img\portfolio\portfolio-11.jpg" />
+    <Content Include="assets\img\portfolio\portfolio-12.jpg" />
     <Content Include="assets\img\profile.jpg" />
     <Content Include="assets\img\profile5.png" />
     <Content Include="assets\img\profile1.png" />
